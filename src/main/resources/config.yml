@@ -1,0 +1,182 @@
+# Configurazione DuelliRealistici
+# Versione configurazione: 1.0
+
+# ============================================
+# IMPOSTAZIONI GENERALI
+# ============================================
+general:
+  prefix: "&8[&bDuelli&8] &r"
+  duel-world: "duelli_world"
+  cooldown-seconds: 30
+  challenge-timeout: 30
+  max-duel-duration: 300
+  disable-commands-during-duel: true
+  blocked-commands:
+    - "home"
+    - "spawn"
+    - "tp"
+    - "tpa"
+    - "back"
+    - "warp"
+  particle-effects: true
+  sounds: true
+
+# ============================================
+# IMPOSTAZIONI MONDO DUELLI
+# ============================================
+duel-world:
+  auto-generate: true
+  world-type: "FLAT"
+  spawn-1:
+    x: 100.5
+    y: 64
+    z: 100.5
+    yaw: 180.0
+    pitch: 0.0
+  spawn-2:
+    x: 120.5
+    y: 64
+    z: 120.5
+    yaw: 0.0
+    pitch: 0.0
+  world-border-radius: 50
+  protect-blocks: true
+  prevent-item-drop: true
+  return-delay: 5
+
+# ============================================
+# MYSQL CONFIGURAZIONE
+# ============================================
+mysql:
+  enabled: true
+  host: "localhost"
+  port: 3306
+  database: "coralmc_duelli"
+  username: "root"
+  password: ""
+  pool:
+    maximum-pool-size: 10
+    minimum-idle: 2
+    connection-timeout: 30000
+    idle-timeout: 600000
+    max-lifetime: 1800000
+  tables:
+    stats: "duelli_stats"
+    history: "duelli_history"
+
+# ============================================
+# ECONOMIA / RICOMPENSE (Vault)
+# ============================================
+rewards:
+  enabled: true
+  winner:
+    money: 100.0
+    commands:
+      - "give %winner% diamond 5"
+      - "lp user %winner% permission settemp duelli.winner 1d"
+    items:
+      - "DIAMOND:3"
+      - "GOLDEN_APPLE:2"
+  loser:
+    money: 10.0
+    commands: []
+    items: []
+  draw:
+    money: 25.0
+    commands: []
+    items:
+      - "IRON_INGOT:5"
+
+# ============================================
+# LEADERBOARD
+# ============================================
+leaderboard:
+  entries-per-page: 10
+  types:
+    - "vittorie"
+    - "duelli"
+    - "winrate"
+    - "streak"
+  cache-update-minutes: 5
+
+# ============================================
+# KIT CONFIGURAZIONE
+# ============================================
+kits:
+  config-file: "kits.yml"
+  default-kit: "guerriero"
+  allow-custom-kits: false
+
+# ============================================
+# MESSAGGI
+# ============================================
+messages:
+  no-permission: "&cNon hai il permesso per eseguire questo comando."
+  player-not-found: "&cGiocatore &e%player% &cnon trovato."
+  player-offline: "&cIl giocatore &e%player% &cnon è online."
+  cannot-duel-self: "&cNon puoi sfidare te stesso!"
+  already-in-duel: "&cSei già in un duello!"
+  target-already-in-duel: "&cIl giocatore &e%player% &cè già in un duello!"
+  duel-world-not-ready: "&cIl mondo duello non è pronto. Riprova tra poco."
+  challenge-sent: "&aHai sfidato &e%target% &aper un duello con il kit &b%kit%&a!"
+  challenge-received: "&e%player% &ati ha sfidato per un duello con il kit &b%kit%&e!"
+  challenge-expired: "&cLa sfida a &e%player% &cè scaduta."
+  challenge-expired-target: "&cLa sfida da &e%player% &cè scaduta."
+  challenge-accepted: "&aHai accettato la sfida di &e%player%&a! Teletrasporto in corso..."
+  challenge-accepted-target: "&e%player% &aha accettato la tua sfida! Teletrasporto in corso..."
+  challenge-denied: "&cHai rifiutato la sfida di &e%player%&c."
+  challenge-denied-target: "&e%player% &cha rifiutato la tua sfida."
+  challenge-cancelled: "&cHai annullato la sfida a &e%player%&c."
+  challenge-cancelled-target: "&e%player% &cha annullato la sfida."
+  no-pending-challenge: "&cNon hai sfide in sospeso."
+  no-pending-challenge-from: "&cNessuna sfida in arrivo da &e%player%&c."
+  kit-not-found: "&cKit &e%kit% &cnon trovato."
+  kit-no-permission: "&cNon hai il permesso per usare il kit &e%kit%&c."
+  kit-set: "&aKit &e%kit% &aimpostato come predefinito."
+  duel-starting: "&6&l⚔ IL DUELLO INIZIA TRA &e%seconds% &6SECONDI! ⚔"
+  duel-start: "&6&l⚔ &eINIZIO DUELLO! &6&l⚔"
+  duel-end-win: "&a&l✦ VITTORIA! &r&aHai sconfitto &e%loser%&a!"
+  duel-end-loss: "&c&l✦ SCONFITTA! &r&cSei stato sconfitto da &e%winner%&c."
+  duel-end-draw: "&e&l✦ PAREGGIO! &r&eIl duello contro &e%opponent% &esi è concluso in pareggio."
+  duel-end-timeout: "&c&l✦ TEMPO SCADUTO! &r&cIl duello è finito in pareggio per timeout."
+  duel-forfeit: "&c%player% &cha abbandonato il duello. &a%winner% &avince per forfeit!"
+  stats-header: "&8&m----------------&r &6&lSTATISTICHE DUELLI &r&8&m----------------"
+  stats-player: "&eGiocatore: &f%player%"
+  stats-duels: "&eDuelli totali: &f%duels%"
+  stats-wins: "&aVittorie: &f%wins%"
+  stats-losses: "&cSconfitte: &f%losses%"
+  stats-draws: "&ePareggi: &f%draws%"
+  stats-winrate: "&eWinrate: &f%winrate%%"
+  stats-streak: "&eStreak attuale: &f%streak%"
+  stats-best-streak: "&6Miglior streak: &f%beststreak%"
+  stats-kills: "&eUccisioni: &f%kills%"
+  stats-deaths: "&eMorti: &f%deaths%"
+  stats-kd: "&eK/D: &f%kd%"
+  stats-footer: "&8&m--------------------------------------------------"
+  top-header: "&8&m----------------&r &6&lLEADERBOARD %type% &r&8&m----------------"
+  top-entry: "&e#%pos% &f%player% &8- &e%value%"
+  top-footer: "&8&m--------------------------------------------------"
+  top-empty: "&cNessun dato disponibile per questa leaderboard."
+  top-page: "&7Pagina &e%page%&7/&e%pages%"
+  reward-received: "&aHai ricevuto: &e%rewards%"
+  reward-money: "&e$%amount%"
+  reward-items: "&e%items%"
+  reward-commands: "&eComandi eseguiti: &f%count%"
+  admin-reload: "&aConfigurazione ricaricata!"
+  admin-world-created: "&aMondo duello creato con successo!"
+  admin-world-exists: "&eIl mondo duello esiste già."
+  admin-spawn-set: "&aSpawn %num% impostato alla tua posizione attuale."
+  admin-duel-stopped: "&aDuello tra &e%p1% &ee &e%p2% &aforzato a terminare."
+  admin-no-active-duel: "&cNessun duello attivo tra questi giocatori."
+  error-generic: "&cSi è verificato un errore. Contatta un amministratore."
+  error-mysql: "&cErrore di connessione al database. Riprova più tardi."
+  error-no-kit: "&cNessun kit selezionato. Usa /duello kit <nome>."
+
+# ============================================
+# AVANZATE
+# ============================================
+advanced:
+  persist-inventories: false
+  debug: false
+  check-updates: true
+  metrics: true

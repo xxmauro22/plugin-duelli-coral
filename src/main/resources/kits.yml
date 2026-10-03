@@ -1,0 +1,311 @@
+# Configurazione Kit Duelli
+# Formato:
+# kit-id:
+#   name: "&cNome Visibile"
+#   permission: "duelli.kit.nome"
+#   icon: MATERIAL
+#   description:
+#     - "&7Descrizione del kit"
+#   items:
+#     - slot: 0
+#       material: DIAMOND_SWORD
+#       name: "&cSpada del Guerriero"
+#       lore:
+#         - "&7Danno: &c10"
+#       enchantments:
+#         DAMAGE_ALL: 5
+#         DURABILITY: 3
+#     - slot: 1
+#       material: BOW
+#       name: "&cArco del Guerriero"
+#       enchantments:
+#         ARROW_DAMAGE: 3
+#         ARROW_INFINITE: 1
+#     - slot: 8
+#       material: ARROW
+#       amount: 1
+#   armor:
+#     helmet:
+#       material: DIAMOND_HELMET
+#       enchantments:
+#         PROTECTION_ENVIRONMENTAL: 4
+#         DURABILITY: 3
+#     chestplate:
+#       material: DIAMOND_CHESTPLATE
+#       enchantments:
+#         PROTECTION_ENVIRONMENTAL: 4
+#         DURABILITY: 3
+#     leggings:
+#       material: DIAMOND_LEGGINGS
+#       enchantments:
+#         PROTECTION_ENVIRONMENTAL: 4
+#         DURABILITY: 3
+#     boots:
+#       material: DIAMOND_BOOTS
+#       enchantments:
+#         PROTECTION_ENVIRONMENTAL: 4
+#         DURABILITY: 3
+#         DEPTH_STRIDER: 3
+#   potion-effects:
+#     - type: SPEED
+#       amplifier: 0
+#       duration: 999999
+#     - type: INCREASE_DAMAGE
+#       amplifier: 0
+#       duration: 999999
+
+guerriero:
+  name: "&c⚔ Guerriero"
+  permission: "duelli.kit.guerriero"
+  icon: "DIAMOND_SWORD"
+  description:
+    - "&7Kit bilanciato per il combattimento ravvicinato"
+    - "&7Armatura di diamante completa"
+    - "&7Spada affilata e arco con frecce infinite"
+  items:
+    - slot: 0
+      material: DIAMOND_SWORD
+      name: "&cSpada del Guerriero"
+      lore:
+        - "&7Danno base: &c10"
+        - "&7Affilatezza V & Durabilità III"
+      enchantments:
+        DAMAGE_ALL: 5
+        DURABILITY: 3
+    - slot: 1
+      material: BOW
+      name: "&cArco del Guerriero"
+      lore:
+        - "&7Potenza III & Frecce Infinite"
+      enchantments:
+        ARROW_DAMAGE: 3
+        ARROW_INFINITE: 1
+        DURABILITY: 3
+    - slot: 8
+      material: ARROW
+      amount: 1
+    - slot: 2
+      material: GOLDEN_APPLE
+      amount: 8
+      name: "&6Mela d'Oro"
+    - slot: 3
+      material: COOKED_BEEF
+      amount: 32
+      name: "&cManzo Cotto"
+  armor:
+    helmet:
+      material: DIAMOND_HELMET
+      name: "&bElmo del Guerriero"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        AQUA_AFFINITY: 1
+    chestplate:
+      material: DIAMOND_CHESTPLATE
+      name: "&bCorazza del Guerriero"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+    leggings:
+      material: DIAMOND_LEGGINGS
+      name: "&bGambali del Guerriero"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+    boots:
+      material: DIAMOND_BOOTS
+      name: "&bStivali del Guerriero"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        DEPTH_STRIDER: 3
+        FEATHER_FALLING: 4
+  potion-effects:
+    - type: SPEED
+      amplifier: 0
+      duration: 999999
+    - type: INCREASE_DAMAGE
+      amplifier: 0
+      duration: 999999
+
+arciere:
+  name: "&a🏹 Arciere"
+  permission: "duelli.kit.arciere"
+  icon: "BOW"
+  description:
+    - "&7Specialista nel combattimento a distanza"
+    - "&7Armatura di ferro incantata"
+    - "&7Arco potenziato e frecce speciali"
+  items:
+    - slot: 0
+      material: BOW
+      name: "&aArco dell'Arciere"
+      lore:
+        - "&7Potenza V & Frecce Infinite"
+        - "&7Spinta II & Durabilità III"
+      enchantments:
+        ARROW_DAMAGE: 5
+        ARROW_INFINITE: 1
+        ARROW_KNOCKBACK: 2
+        DURABILITY: 3
+    - slot: 1
+      material: CROSSBOW
+      name: "&aBalestra dell'Arciere"
+      lore:
+        - "&7Caricamento Rapido III & Multishot"
+        - "&7Potenza II & Durabilità III"
+      enchantments:
+        QUICK_CHARGE: 3
+        MULTISHOT: 1
+        PIERCING: 2
+        DURABILITY: 3
+    - slot: 8
+      material: ARROW
+      amount: 64
+    - slot: 9
+      material: SPECTRAL_ARROW
+      amount: 16
+      name: "&eFrecce Spettrali"
+    - slot: 2
+      material: IRON_SWORD
+      name: "&fSpada di Ferro"
+      enchantments:
+        DAMAGE_ALL: 3
+        DURABILITY: 3
+    - slot: 3
+      material: GOLDEN_APPLE
+      amount: 5
+      name: "&6Mela d'Oro"
+    - slot: 4
+      material: COOKED_CHICKEN
+      amount: 32
+      name: "&ePollo Cotto"
+  armor:
+    helmet:
+      material: IRON_HELMET
+      name: "&fElmo dell'Arciere"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        AQUA_AFFINITY: 1
+    chestplate:
+      material: IRON_CHESTPLATE
+      name: "&fCorazza dell'Arciere"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+    leggings:
+      material: IRON_LEGGINGS
+      name: "&fGambali dell'Arciere"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        SWIFT_SNEAK: 3
+    boots:
+      material: IRON_BOOTS
+      name: "&fStivali dell'Arciere"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        DEPTH_STRIDER: 3
+        FEATHER_FALLING: 4
+  potion-effects:
+    - type: SPEED
+      amplifier: 1
+      duration: 999999
+    - type: NIGHT_VISION
+      amplifier: 0
+      duration: 999999
+
+mago:
+  name: "&d✦ Mago"
+  permission: "duelli.kit.mago"
+  icon: "BLAZE_ROD"
+  description:
+    - "&7Maestro delle arti arcane"
+    - "&7Armatura di cuoio incantata"
+    - "&7Bacchetta magica e pozioni"
+  items:
+    - slot: 0
+      material: BLAZE_ROD
+      name: "&dBacchetta del Mago"
+      lore:
+        - "&7Click destro: Palla di fuoco"
+        - "&7Shift + Click: Teletrasporto breve"
+      enchantments: {}
+    - slot: 1
+      material: ENDER_PEARL
+      amount: 8
+      name: "&dPerla dell'Ender"
+    - slot: 2
+      material: SPLASH_POTION
+      amount: 8
+      name: "&cPozione di Danno II"
+      potion-type: "HARMING"
+      potion-level: 2
+    - slot: 3
+      material: SPLASH_POTION
+      amount: 4
+      name: "&aPozione di Cura II"
+      potion-type: "HEALING"
+      potion-level: 2
+    - slot: 4
+      material: SPLASH_POTION
+      amount: 4
+      name: "&bPozione di Velocità II"
+      potion-type: "SWIFTNESS"
+      potion-level: 2
+    - slot: 5
+      material: SPLASH_POTION
+      amount: 4
+      name: "&9Pozione di Forza II"
+      potion-type: "STRENGTH"
+      potion-level: 2
+    - slot: 6
+      material: GOLDEN_APPLE
+      amount: 3
+      name: "&6Mela d'Oro"
+    - slot: 7
+      material: ENCHANTED_GOLDEN_APPLE
+      amount: 1
+      name: "&6&lMela d'Oro Incantata"
+  armor:
+    helmet:
+      material: LEATHER_HELMET
+      name: "&dCappello del Mago"
+      color: "9932CC"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        AQUA_AFFINITY: 1
+    chestplate:
+      material: LEATHER_CHESTPLATE
+      name: "&dVeste del Mago"
+      color: "9932CC"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+    leggings:
+      material: LEATHER_LEGGINGS
+      name: "&dPantaloni del Mago"
+      color: "9932CC"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        SWIFT_SNEAK: 3
+    boots:
+      material: LEATHER_BOOTS
+      name: "&dStivali del Mago"
+      color: "9932CC"
+      enchantments:
+        PROTECTION_ENVIRONMENTAL: 4
+        DURABILITY: 3
+        DEPTH_STRIDER: 3
+        FEATHER_FALLING: 4
+  potion-effects:
+    - type: SPEED
+      amplifier: 0
+      duration: 999999
+    - type: REGENERATION
+      amplifier: 1
+      duration: 999999
