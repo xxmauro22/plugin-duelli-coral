@@ -2,9 +2,9 @@ name: DuelliRealistici
 version: ${project.version}
 main: it.coralmc.duelli.DuelliPlugin
 api-version: '1.21'
-author: CoralMC Team
+author: DuelliRealistici Team
 description: Sistema di duelli realistici con kit, statistiche MySQL e leaderboard
-website: https://coralmc.it
+website: https://github.com/xxmauro22/plugin-duelli-coral
 
 commands:
   duello:

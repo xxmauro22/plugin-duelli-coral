@@ -36,10 +36,10 @@ public final class DuelliPlugin extends JavaPlugin {
     public void onEnable() {
         instance = this;
         
-        messageUtil = new MessageUtil(this);
-        
         configManager = new ConfigManager(this);
         configManager.loadConfigs();
+        
+        messageUtil = new MessageUtil(this);
         
         mysqlManager = new MySQLManager(this);
         if (configManager.getConfig().getBoolean("mysql.enabled", true)) {
