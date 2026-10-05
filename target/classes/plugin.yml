@@ -1,0 +1,66 @@
+name: DuelliRealistici
+version: 1.0.0-SNAPSHOT
+main: it.coralmc.duelli.DuelliPlugin
+api-version: '1.21'
+author: DuelliRealistici Team
+description: Sistema di duelli realistici con kit, statistiche MySQL e leaderboard
+website: https://github.com/xxmauro22/plugin-duelli-coral
+
+commands:
+  duello:
+    description: Comando principale per i duelli
+    usage: /duello help
+    aliases: [duel, duelmatch]
+    permission: duelli.use
+  duellostats:
+    description: Visualizza le statistiche dei duelli
+    usage: /duellostats [player]
+    aliases: [duelstats, dstats]
+    permission: duelli.stats
+  duellotop:
+    description: Visualizza la leaderboard dei duelli
+    usage: /duellotop [tipo] [pagina]
+    aliases: [dueltop, dtop]
+    permission: duelli.top
+  duellokit:
+    description: Gestione dei kit duello
+    usage: /duellokit <list|info|give>
+    aliases: [duelkit, dkit]
+    permission: duelli.kit
+  duelloadmin:
+    description: Comandi amministrativi per i duelli
+    usage: /duelloadmin <reload|createworld|setspawn|forcestop>
+    aliases: [dueladmin, dadmin]
+    permission: duelli.admin
+
+permissions:
+  duelli.use:
+    description: Permette di usare i comandi base dei duelli
+    default: true
+  duelli.stats:
+    description: Permette di vedere le proprie statistiche
+    default: true
+  duelli.stats.others:
+    description: Permette di vedere le statistiche degli altri
+    default: op
+  duelli.top:
+    description: Permette di vedere la leaderboard
+    default: true
+  duelli.kit:
+    description: Permette di vedere i kit disponibili
+    default: true
+  duelli.kit.guerriero:
+    description: Permette di usare il kit Guerriero
+    default: true
+  duelli.kit.arciere:
+    description: Permette di usare il kit Arciere
+    default: true
+  duelli.kit.mago:
+    description: Permette di usare il kit Mago
+    default: true
+  duelli.admin:
+    description: Accesso ai comandi amministrativi
+    default: op
+  duelli.bypass:
+    description: Bypass cooldown e restrizioni
+    default: op

@@ -4,13 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>it.coralmc</groupId>
+    <groupId>it.xxmauro</groupId>
     <artifactId>duelli</artifactId>
     <version>1.0.0-SNAPSHOT</version>
     <packaging>jar</packaging>
 
     <name>DuelliRealistici</name>
-    <description>Sistema di duelli realistici per CoralMC</description>
+    <description>Sistema di duelli realistici per Minecraft</description>
 
     <properties>
         <maven.compiler.source>21</maven.compiler.source>
@@ -83,18 +83,18 @@
                             <createDependencyReducedPom>false</createDependencyReducedPom>
                             <transformers>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ManifestResourceTransformer">
-                                    <mainClass>it.coralmc.duelli.DuelliPlugin</mainClass>
+                                    <mainClass>it.xxmauro.duelli.DuelliPlugin</mainClass>
                                 </transformer>
                                 <transformer implementation="org.apache.maven.plugins.shade.resource.ServicesResourceTransformer"/>
                             </transformers>
                             <relocations>
                                 <relocation>
                                     <pattern>com.zaxxer.hikari</pattern>
-                                    <shadedPattern>it.coralmc.duelli.shaded.hikari</shadedPattern>
+                                    <shadedPattern>it.xxmauro.duelli.shaded.hikari</shadedPattern>
                                 </relocation>
                                 <relocation>
                                     <pattern>com.mysql</pattern>
-                                    <shadedPattern>it.coralmc.duelli.shaded.mysql</shadedPattern>
+                                    <shadedPattern>it.xxmauro.duelli.shaded.mysql</shadedPattern>
                                 </relocation>
                             </relocations>
                         </configuration>
